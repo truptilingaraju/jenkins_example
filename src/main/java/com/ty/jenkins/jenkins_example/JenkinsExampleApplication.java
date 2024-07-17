@@ -11,7 +11,7 @@ public class JenkinsExampleApplication {
 
 	public static final Logger logger= LoggerFactory.getLogger(JenkinsExampleApplication.class);
 	public static void main(String[] args) {
-		logger.info("continuos integration");
+		logger.info("continuos integration")
 		SpringApplication.run(JenkinsExampleApplication.class, args);
 	}
 
