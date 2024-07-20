@@ -33,4 +33,10 @@ public class EmployeeController {
     }
 
 
+    @GetMapping("/message")
+    public String getMessage(){
+        return "Hello World";
+    }
+
+
 }
