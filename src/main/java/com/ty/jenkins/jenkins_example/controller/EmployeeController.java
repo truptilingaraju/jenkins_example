@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 
 @RestController
 @AllArgsConstructor
+    @RequestMapping("/jenkins_example")
 public class EmployeeController {
 
     private EmployeeService employeeService;
