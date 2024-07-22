@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 
 @RestController
-@RequestMapping("/employee")
 @AllArgsConstructor
 public class EmployeeController {
 
@@ -30,6 +29,12 @@ public class EmployeeController {
     public ResponseEntity<ApiResponse> getEmployee(@PathVariable String id){
 
         return employeeService.getEmployee(id);
+    }
+
+    @GetMapping("/message")
+    public String getMessage(){
+
+        return "hi welcome to springboot example through jenkins";
     }
 
 
