@@ -13,30 +13,12 @@ import java.math.BigDecimal;
 
 @RestController
 @AllArgsConstructor
-    @RequestMapping("/jenkins_example")
 public class EmployeeController {
 
-    private EmployeeService employeeService;
-
-    @PostMapping
-    public ResponseEntity<ApiResponse> createEmployee( @RequestBody EmployeeDto employeeDto){
-
-        return employeeService.createEmployee(employeeDto);
-    }
-
-
-
-    @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse> getEmployee(@PathVariable String id){
-
-        return employeeService.getEmployee(id);
-    }
-
-    @GetMapping("/message")
-    public String getMessage(){
-
-        return "hi welcome to springboot example through jenkins";
-    }
+    @GetMapping("/welcome/{name}")
+	public String welcome(@PathVariable("name") String name) {
+		return name+", Welcome to Springboot through jenkins!";
+	}
 
 
 }
